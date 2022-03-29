@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.redisdoubledeletedemo.dao.StudentMapper">
+
+    <insert id="insert" parameterType="com.example.redisdoubledeletedemo.model.Student"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into student(numbercode,stuname,stusex,stuage)
+             values(#{numbercode},#{stuname},#{stusex},#{stuage})
+    </insert>
+
+<!--    <update id="update" parameterType="Student" >-->
+<!--        update student set numbercode=#{numbercode},stuname=#{stuname},stusex=#{stusex},stuage=#{stuage} where id=#{id}-->
+<!--    </update>-->
+
+<!--    <delete id="delete" parameterType="int">-->
+<!--        delete from student where id=#{id}-->
+<!--    </delete>-->
+
+</mapper>
+

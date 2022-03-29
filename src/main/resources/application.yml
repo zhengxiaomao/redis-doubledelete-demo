@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false
+    username: root
+    password: 123456789
+    driver-class-name: com.mysql.jdbc.Driver
+  # 配置 redis
+  redis:
+    # redis 数据库索引（默认为0）
+    database: 0
+    # redis 服务地址
+    host: 127.0.0.1
+    # redis 连接端口
+    port: 6379
+    # redis 服务器链接密码 （默认为空）
+    password:
+    # 连接超时时间 （毫秒）
+    timeout: 5000
+    # 配置 redis 连接池
+    jedis:
+      pool:
+        # 连接池最大连接数　（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池的最大空闲连接
+        max-idle: 8
+        # 连接池中 最小空闲连接
+        min-idle: 0
+# 配置 mybatis
+mybatis:
+  # 设置 实体类所在的包名
+  typeAliasesPackage: com.example.demo.model
+  # mybatis xml 映射关系
+  mapper-locations: classpath:mapper/*.xml
